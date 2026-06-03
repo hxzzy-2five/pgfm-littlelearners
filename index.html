@@ -1,11 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Little Learners | Preschool & Childcare Finder</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" id="home">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Little Learners home">
+          <span>
+            <strong>Little Learners</strong>
+            <small>Preschool & childcare finder</small>
+          </span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#finder">Finder</a>
+          <a href="#saved">Saved</a>
+          <a href="#data">Data</a>
+        </div>
+      </nav>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">Find early childhood centres with less clutter.</h1>
+          <p>
+            Search active childcare centres and kindergartens in Singapore,
+            compare key details, preview locations on Google Maps, and save
+            centres you want to review later.
+          </p>
+          <a class="button primary" href="#finder">Start searching</a>
+        </div>
+
+      </section>
+    </header>
+
+    <main>
+      <section class="section" id="finder" aria-labelledby="finder-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Search and shortlist</p>
+            <h2 id="finder-title">Centre finder</h2>
+          </div>
+          <p class="status" id="data-status" role="status">Loading data...</p>
+        </div>
+
+        <form class="filters" id="filter-form">
+          <label class="search-field">
+            Search by centre, area, postal code
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Try Tampines, Bedok, Sparkletots..."
+              autocomplete="off"
+            />
+          </label>
+
+          <label>
+            Service model
+            <select id="service-filter">
+              <option value="all">All centres</option>
+              <option value="CC">Childcare</option>
+              <option value="KN">Kindergarten</option>
+              <option value="DS">Development support</option>
+            </select>
+          </label>
+
+          <label>
+            Vacancy
+            <select id="vacancy-filter">
+              <option value="all">Any vacancy</option>
+              <option value="available">Available</option>
+              <option value="limited">Limited</option>
+              <option value="full">Full</option>
+            </select>
+          </label>
+
+          <label>
+            Food
+            <select id="food-filter">
+              <option value="all">Any food</option>
+              <option value="no-pork">No pork no lard</option>
+              <option value="others">Others</option>
+            </select>
+          </label>
+
+          <label>
+            Language
+            <select id="language-filter">
+              <option value="all">Any language</option>
+              <option value="chinese">Chinese</option>
+              <option value="malay">Malay</option>
+              <option value="tamil">Tamil</option>
+            </select>
+          </label>
+
+          <button class="button secondary" type="reset">Reset</button>
+        </form>
+
+        <div class="summary-grid" aria-label="Current results summary">
+          <article>
+            <strong id="result-count">0</strong>
+            <span>results found</span>
+          </article>
+          <article>
+            <strong id="available-count">0</strong>
+            <span>with vacancy</span>
+          </article>
+          <article>
+            <strong id="saved-count">0</strong>
+            <span>saved centres</span>
+          </article>
+        </div>
+
+        <div class="finder-layout">
+          <section class="result-panel" aria-label="Search results">
+            <p class="result-note" id="result-note"></p>
+            <div id="empty-state" class="empty-state" hidden>
+              <h3>No matching centres found</h3>
+              <p>Try another area, centre name, or remove one filter.</p>
+            </div>
+            <div class="cards-grid" id="results-grid"></div>
+          </section>
+
+          <aside class="map-panel" aria-labelledby="map-title">
+            <div class="map-heading">
+              <div>
+                <p class="eyebrow">Google Maps</p>
+              </div>
+            </div>
+            <iframe
+              id="google-map"
+              title="Google map showing selected centre"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Singapore%20preschool&output=embed"
+            ></iframe>
+            <div class="selected-centre" id="selected-centre">
+              Select a result to preview its location.
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="saved" aria-labelledby="saved-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Shortlist</p>
+            <h2 id="saved-title">Saved centres</h2>
+          </div>
+          <button class="button secondary" id="clear-saved" type="button">Clear saved</button>
+        </div>
+        <div class="saved-grid" id="saved-grid"></div>
+      </section>
+    </main>
+
+    <dialog id="details-dialog">
+      <div class="dialog-header">
+        <h2 id="dialog-title">Centre details</h2>
+        <button id="close-dialog" type="button" aria-label="Close details">x</button>
+      </div>
+      <div id="dialog-body"></div>
+    </dialog>
+
+    <footer class="footer">
+      <p>&copy; Little Learners</p>
+    </footer>
+  </body>
 </html>
