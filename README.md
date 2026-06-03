@@ -1,7 +1,7 @@
 # Little Learners - Preschool & Childcare Finder
 Little Learners is a user-friendly website that helps parents and guardians search for preschool and childcare centres in Singapore.
 
-The website uses official centre data from data.gov.sg and turns it into a simple searcable directory. Users can search by centre name, operator, address or postal code filter by service model, vacancy, food toption and language, view a selected centre on Google Maps and save centres into a shorlist.
+The website uses official centre data from data.gov.sg and turns it into a simple searcable directory. Users can search by centre name, area or postal code filter by service model, vacancy, food option, language, view a selected centre on Google Maps and save centres into a shorlist.
 
 This project fits the Digital Inclusion theme because it makes public childcare information easier to access, understand and compare. Users can interact with the information in a clearer and more practical way.
 
