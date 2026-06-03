@@ -23,6 +23,11 @@ As a Muslim parent, I want to filter by food option so that I can find centres t
 
 As a busy parent, I want to save centres into a shorlist to compare them later without searching again and view a centre on Google Maps so that I can understand where it is located before contacting the centre.
 
+Idea - https://www.figma.com/board/Aq3PiOEdg8nzg4mGPMkKmv/Programming-Fundamentals-Project-Organiser?node-id=0-1&p=f&t=Bj7uZDwGE6sQ3Od0-0
+
+Design - https://www.figma.com/design/WRoG9TRK7WK0tDzyoBfjGs/pgfm---litter-learners?t=Bj7uZDwGE6sQ3Od0-0
+
+
 ## Features
 
 - Search preschool and chilcare centres by centres, area, postal code, language, food or scheme.
